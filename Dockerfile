@@ -26,4 +26,4 @@ ENV PATH="/usr/local/go/bin:${PATH}"
 ENV GOPROXY=https://goproxy.io
 
 
-RUN cd Gossip && mkdir config && rm -rf MGossip/config && rm -rf gossip/config && python3 topology.py && cp -r config MGossip && cp -r config gossip
+RUN cd gossip && mkdir config && rm -rf mgossip/config && rm -rf gossip/config && python3 topology.py && cp -r config mgossip && cp -r config gossip

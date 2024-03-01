@@ -127,7 +127,7 @@ sudo docker run -it --name mgossip-master  zhuohuashiyi/mgossip:v1.0  # 运行�
 sudo docker run -it --name mgossip-slave zhuohuashiyi/mgossip:v1.0  # 运行从服务器容器
 
 service ssh restart  # 从服务器上运行
-cd $WORKDIR && scp root@172.17.0.3:/Gossip/slave.py slave.py  # 提示输入yes
+cd $WORKDIR && scp root@$SLAVE:/Gossip/slave.py slave.py  # 提示输入yes
 
 # 接下来可以像上面一样单个单个进行实验，也可以如下进行批量实验
 python3 slave.py  # 从服务器
